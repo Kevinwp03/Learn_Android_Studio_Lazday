@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RadioButtonActivity">
 
     <TextView
         android:id="@+id/text1"
@@ -58,5 +58,28 @@
         app:layout_constraintLeft_toLeftOf="parent"
         />
 
+    <Button
+        android:id="@+id/buttonBack1"
+        android:text="BACK"
+        android:textSize="10pt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonNext1"
+        android:text="NEXT"
+        android:textSize="10pt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBack1"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
