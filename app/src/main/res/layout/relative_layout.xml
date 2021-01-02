@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelativeLayoutActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textLayout3_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="Kevin williams" />
+
+        <TextView
+            android:id="@+id/textLayout3_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/textLayout3_1"
+            android:layout_toRightOf="@id/textLayout3_1"
+            android:text="Hardianti" />
+
+        <TextView
+            android:id="@+id/textLayout3_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/textLayout3_1"
+            android:layout_toLeftOf="@id/textLayout3_1"
+            android:text="Rafael" />
+
+        <TextView
+            android:id="@+id/textLayout3_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/textLayout3_1"
+            android:layout_centerHorizontal="true"
+            android:text="Text 4" />
+
+        <TextView
+            android:id="@+id/textLayout3_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textLayout3_1"
+            android:layout_centerHorizontal="true"
+            android:text="Text 5" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
