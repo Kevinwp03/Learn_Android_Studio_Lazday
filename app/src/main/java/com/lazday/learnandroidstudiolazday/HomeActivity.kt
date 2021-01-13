@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 
 class HomeActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -36,22 +37,31 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
         return super.onCreateOptionsMenu(menu)
     }
 
+
+
     // aksi terhadap menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {       // untuk menggunakan menunya
-        return when(item.itemId) {
+        when(item.itemId) {
             R.id.action_setting -> {
-            Toast.makeText(applicationContext, "Pengaturan", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, SettingActivity::class.java))
+            }
+        }
+
+        return when (item.itemId) {
+            R.id.action_setting -> {
+                Toast.makeText(applicationContext, "Pengaturan", Toast.LENGTH_SHORT).show()
                 true
             }
-            R.id.action_about-> {
-            Toast.makeText(applicationContext, "Tentang Aplikasi", Toast.LENGTH_SHORT).show()
+            R.id.action_about -> {
+                Toast.makeText(applicationContext, "Tentang Aplikasi", Toast.LENGTH_SHORT).show()
                 true
             }
-            R.id.action_chart-> {
+            R.id.action_chart -> {
                 Toast.makeText(applicationContext, "Keranjang", Toast.LENGTH_SHORT).show()
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
+
     }
 }
