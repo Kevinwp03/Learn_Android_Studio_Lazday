@@ -44,13 +44,12 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
     // untuk Menu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
     }
-
-
 
     // aksi terhadap menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {       // untuk menggunakan menunya

@@ -30,6 +30,7 @@ class RadioButtonActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(applicationContext, radio.text, Toast.LENGTH_SHORT).show()
         }
     }
+
 // Intent
     override fun onClick(v: View) { // cek tanda tanya "?"
         when(v.id){

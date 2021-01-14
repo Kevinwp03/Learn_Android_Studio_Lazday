@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LearnAndroidStudioLazday">
-        <activity android:name=".RelativeLayoutActivity"></activity>
+        <activity android:name=".RelativeLayoutActivity"/>
+
+        <activity android:name=".SettingActivity"/>
 
         <activity android:name=".HomeActivity">
             <intent-filter>
