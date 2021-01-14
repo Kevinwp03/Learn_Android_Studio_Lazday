@@ -12,7 +12,11 @@ import androidx.appcompat.app.AppCompatDelegate
 
 class HomeActivity : AppCompatActivity(), View.OnClickListener {
 
+
+    private val pref by lazy { PrefHelper (this) }
+
     private lateinit var btnIntent: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +25,17 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
         btnIntent = findViewById(R.id.buttonNext1)
         btnIntent.setOnClickListener(this)
 
+        // Get data untuk menyimpan theme, dari setting Activity.
+        when (pref.getBoolean("pref_is_dark_mode")){
+            true -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+            false -> {AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)}
+        }
+
     }
 // berpindah activity
+
     override fun onClick(v: View) { // cek tanda tanya "?"
         when(v.id){
             R.id.buttonNext1 -> run {
